@@ -11,16 +11,39 @@
 		8B187A642CB6532D007CFD24 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8B187A632CB6532D007CFD24 /* SnapKit */; };
 		8B187A6C2CB661CE007CFD24 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B187A6B2CB661CE007CFD24 /* DetailViewController.swift */; };
 		8B187A6E2CB6A91C007CFD24 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B187A6D2CB6A91C007CFD24 /* UITextField+.swift */; };
+		8B5E644C2CC8858F00CB07BC /* AppStoreTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E644B2CC8858F00CB07BC /* AppStoreTitleView.swift */; };
+		8B5E644E2CC885AF00CB07BC /* AppStoreChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E644D2CC885AF00CB07BC /* AppStoreChipView.swift */; };
+		8B5E64512CC885E300CB07BC /* AppStoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E64502CC885E300CB07BC /* AppStoreInfoView.swift */; };
+		8B5E64532CC885F400CB07BC /* AppStorePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E64522CC885F400CB07BC /* AppStorePreviewView.swift */; };
+		8B5E64592CC8868C00CB07BC /* AppStoreReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E64582CC8868C00CB07BC /* AppStoreReviewView.swift */; };
+		8B5E645C2CCBE12D00CB07BC /* UpdateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E645B2CCBE12D00CB07BC /* UpdateState.swift */; };
+		8B5E645F2CCBE7EF00CB07BC /* AppStoreChipCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E645E2CCBE7EF00CB07BC /* AppStoreChipCellView.swift */; };
+		8B5E64612CCBFB5D00CB07BC /* AppStoreChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5E64602CCBFB5D00CB07BC /* AppStoreChip.swift */; };
 		8B98626A2CB64C4700D97557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9862692CB64C4700D97557 /* AppDelegate.swift */; };
 		8B98626C2CB64C4700D97557 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B98626B2CB64C4700D97557 /* SceneDelegate.swift */; };
 		8B98626E2CB64C4700D97557 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B98626D2CB64C4700D97557 /* LoginViewController.swift */; };
 		8B9862732CB64C4800D97557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B9862722CB64C4800D97557 /* Assets.xcassets */; };
 		8B9862762CB64C4800D97557 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8B9862752CB64C4800D97557 /* Base */; };
+		8BA048402CBA599C005224D8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA0483F2CBA599C005224D8 /* MainViewController.swift */; };
+		8BA048422CBA5A69005224D8 /* applogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BA048412CBA5A69005224D8 /* applogo.png */; };
+		8BF2BCE12CD25B5D0019E56F /* preview.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8BF2BCE02CD25B5D0019E56F /* preview.jpg */; };
+		8BF2BCE32CD276E70019E56F /* AppStoreEvaluatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2BCE22CD276E70019E56F /* AppStoreEvaluatingView.swift */; };
+		8BF2BCE92CD2B3B40019E56F /* AppStoreReviewCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2BCE82CD2B3B40019E56F /* AppStoreReviewCellView.swift */; };
+		8BF2BCED2CD2BA010019E56F /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2BCEC2CD2BA010019E56F /* ReviewViewController.swift */; };
+		8BF2BCEF2CD2BA100019E56F /* VersionHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF2BCEE2CD2BA100019E56F /* VersionHistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8B187A6B2CB661CE007CFD24 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8B187A6D2CB6A91C007CFD24 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		8B5E644B2CC8858F00CB07BC /* AppStoreTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreTitleView.swift; sourceTree = "<group>"; };
+		8B5E644D2CC885AF00CB07BC /* AppStoreChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreChipView.swift; sourceTree = "<group>"; };
+		8B5E64502CC885E300CB07BC /* AppStoreInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreInfoView.swift; sourceTree = "<group>"; };
+		8B5E64522CC885F400CB07BC /* AppStorePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorePreviewView.swift; sourceTree = "<group>"; };
+		8B5E64582CC8868C00CB07BC /* AppStoreReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewView.swift; sourceTree = "<group>"; };
+		8B5E645B2CCBE12D00CB07BC /* UpdateState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateState.swift; sourceTree = "<group>"; };
+		8B5E645E2CCBE7EF00CB07BC /* AppStoreChipCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreChipCellView.swift; sourceTree = "<group>"; };
+		8B5E64602CCBFB5D00CB07BC /* AppStoreChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreChip.swift; sourceTree = "<group>"; };
 		8B9862662CB64C4700D97557 /* iOS35.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS35.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9862692CB64C4700D97557 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B98626B2CB64C4700D97557 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +51,13 @@
 		8B9862722CB64C4800D97557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B9862752CB64C4800D97557 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B9862772CB64C4800D97557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BA0483F2CBA599C005224D8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8BA048412CBA5A69005224D8 /* applogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = applogo.png; path = ../../../../../Downloads/applogo.png; sourceTree = "<group>"; };
+		8BF2BCE02CD25B5D0019E56F /* preview.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = preview.jpg; path = ../../../../../Downloads/preview.jpg; sourceTree = "<group>"; };
+		8BF2BCE22CD276E70019E56F /* AppStoreEvaluatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreEvaluatingView.swift; sourceTree = "<group>"; };
+		8BF2BCE82CD2B3B40019E56F /* AppStoreReviewCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewCellView.swift; sourceTree = "<group>"; };
+		8BF2BCEC2CD2BA010019E56F /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		8BF2BCEE2CD2BA100019E56F /* VersionHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionHistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +85,9 @@
 		8B187A582CB64FB5007CFD24 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				8BF2BCEB2CD2B9DF0019E56F /* Review */,
+				8BF2BCEA2CD2B9C60019E56F /* VersionHistory */,
+				8BA0483C2CBA4325005224D8 /* Main */,
 				8B187A672CB653DE007CFD24 /* Detail */,
 				8B187A662CB653D8007CFD24 /* Login */,
 			);
@@ -64,6 +97,8 @@
 		8B187A592CB64FBD007CFD24 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				8BF2BCE02CD25B5D0019E56F /* preview.jpg */,
+				8BA048412CBA5A69005224D8 /* applogo.png */,
 				8B9862722CB64C4800D97557 /* Assets.xcassets */,
 				8B9862742CB64C4800D97557 /* LaunchScreen.storyboard */,
 			);
@@ -89,6 +124,7 @@
 		8B187A682CB654A7007CFD24 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8B5E64562CC8865700CB07BC /* UI */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -107,6 +143,45 @@
 				8B187A6D2CB6A91C007CFD24 /* UITextField+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		8B5E644A2CC8853D00CB07BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B5E644B2CC8858F00CB07BC /* AppStoreTitleView.swift */,
+				8B5E644D2CC885AF00CB07BC /* AppStoreChipView.swift */,
+				8B5E64502CC885E300CB07BC /* AppStoreInfoView.swift */,
+				8B5E64522CC885F400CB07BC /* AppStorePreviewView.swift */,
+				8B5E64582CC8868C00CB07BC /* AppStoreReviewView.swift */,
+				8B5E645E2CCBE7EF00CB07BC /* AppStoreChipCellView.swift */,
+				8BF2BCE22CD276E70019E56F /* AppStoreEvaluatingView.swift */,
+				8BF2BCE82CD2B3B40019E56F /* AppStoreReviewCellView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B5E64562CC8865700CB07BC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8B5E64572CC8866000CB07BC /* Component */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8B5E64572CC8866000CB07BC /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		8B5E645A2CCBE11600CB07BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8B5E645B2CCBE12D00CB07BC /* UpdateState.swift */,
+				8B5E64602CCBFB5D00CB07BC /* AppStoreChip.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8B98625D2CB64C4700D97557 = {
@@ -136,6 +211,32 @@
 				8B9862772CB64C4800D97557 /* Info.plist */,
 			);
 			path = iOS35;
+			sourceTree = "<group>";
+		};
+		8BA0483C2CBA4325005224D8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8B5E645A2CCBE11600CB07BC /* Model */,
+				8B5E644A2CC8853D00CB07BC /* View */,
+				8BA0483F2CBA599C005224D8 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8BF2BCEA2CD2B9C60019E56F /* VersionHistory */ = {
+			isa = PBXGroup;
+			children = (
+				8BF2BCEE2CD2BA100019E56F /* VersionHistoryViewController.swift */,
+			);
+			path = VersionHistory;
+			sourceTree = "<group>";
+		};
+		8BF2BCEB2CD2B9DF0019E56F /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				8BF2BCEC2CD2BA010019E56F /* ReviewViewController.swift */,
+			);
+			path = Review;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +305,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BF2BCE12CD25B5D0019E56F /* preview.jpg in Resources */,
+				8BA048422CBA5A69005224D8 /* applogo.png in Resources */,
 				8B9862732CB64C4800D97557 /* Assets.xcassets in Resources */,
 				8B9862762CB64C4800D97557 /* Base in Resources */,
 			);
@@ -218,8 +321,21 @@
 			files = (
 				8B98626E2CB64C4700D97557 /* LoginViewController.swift in Sources */,
 				8B187A6E2CB6A91C007CFD24 /* UITextField+.swift in Sources */,
+				8BF2BCE92CD2B3B40019E56F /* AppStoreReviewCellView.swift in Sources */,
+				8B5E64592CC8868C00CB07BC /* AppStoreReviewView.swift in Sources */,
+				8B5E64512CC885E300CB07BC /* AppStoreInfoView.swift in Sources */,
+				8B5E64532CC885F400CB07BC /* AppStorePreviewView.swift in Sources */,
+				8B5E645C2CCBE12D00CB07BC /* UpdateState.swift in Sources */,
 				8B98626A2CB64C4700D97557 /* AppDelegate.swift in Sources */,
+				8BF2BCEF2CD2BA100019E56F /* VersionHistoryViewController.swift in Sources */,
+				8BF2BCE32CD276E70019E56F /* AppStoreEvaluatingView.swift in Sources */,
+				8BA048402CBA599C005224D8 /* MainViewController.swift in Sources */,
+				8B5E644C2CC8858F00CB07BC /* AppStoreTitleView.swift in Sources */,
+				8B5E645F2CCBE7EF00CB07BC /* AppStoreChipCellView.swift in Sources */,
 				8B98626C2CB64C4700D97557 /* SceneDelegate.swift in Sources */,
+				8B5E644E2CC885AF00CB07BC /* AppStoreChipView.swift in Sources */,
+				8BF2BCED2CD2BA010019E56F /* ReviewViewController.swift in Sources */,
+				8B5E64612CCBFB5D00CB07BC /* AppStoreChip.swift in Sources */,
 				8B187A6C2CB661CE007CFD24 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

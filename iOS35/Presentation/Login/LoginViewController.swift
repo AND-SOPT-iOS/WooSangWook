@@ -39,6 +39,11 @@ final class LoginViewController: UIViewController {
         $0.addTarget(self, action: #selector(toggleButtonTapped), for: .valueChanged)
     }
     
+    private let textLabel = UILabel().then {
+        $0.font = .systemFont(ofSize: 16)
+        $0.textAlignment = .center
+    }
+    
     private var pushMode = true
     
     override func viewDidLoad() {
@@ -55,7 +60,7 @@ private extension LoginViewController {
     }
     
     private func addSubviews() {
-        [titleTextField, contentTextView, nextButton, pushModeToggle].forEach { [weak self] view in
+        [titleTextField, contentTextView, nextButton, pushModeToggle, textLabel].forEach { [weak self] view in
             guard let self else { return }
             view.translatesAutoresizingMaskIntoConstraints = false
             self.view.addSubview(view)
@@ -85,6 +90,11 @@ private extension LoginViewController {
             $0.leading.trailing.equalTo(nextButton)
             $0.height.equalTo(40)
         }
+        
+        textLabel.snp.makeConstraints {
+            $0.top.equalTo(pushModeToggle.snp.bottom).offset(20)
+            $0.leading.trailing.equalTo(pushModeToggle)
+        }
     }
 }
 
@@ -101,8 +111,12 @@ private extension LoginViewController {
         else {
             return
         }
-        
         nextViewController.updateTitleAndContents(title: title, contents: content)
+        //nextViewController.delegate = self
+        nextViewController.completionHandler = { [weak self] text in
+            guard let self else { return }
+            self.textLabel.text = text
+        }
         
         if pushMode {
             self.navigationController?.pushViewController(nextViewController, animated: true)
@@ -125,3 +139,8 @@ private extension LoginViewController {
     }
 }
 
+extension LoginViewController: DetailViewControllerDelegate {
+    func updateText(text: String) {
+        textLabel.text = text
+    }
+}
