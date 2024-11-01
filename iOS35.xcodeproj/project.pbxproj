@@ -322,6 +322,8 @@
 		8B781D9A2CD50863004B9DAC /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				8BF2BCEB2CD2B9DF0019E56F /* Review */,
+				8BF2BCEA2CD2B9C60019E56F /* VersionHistory */,
 				8B5E644A2CC8853D00CB07BC /* View */,
 				8B5E645A2CCBE11600CB07BC /* Model */,
 				8BA0483F2CBA599C005224D8 /* DetailViewController.swift */,
@@ -370,8 +372,6 @@
 		8BA0483C2CBA4325005224D8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				8BF2BCEB2CD2B9DF0019E56F /* Review */,
-				8BF2BCEA2CD2B9C60019E56F /* VersionHistory */,
 				8B781D9A2CD50863004B9DAC /* Detail */,
 				8B77B6D02CD34C24007CB78F /* Search */,
 				8B77B6CF2CD34C1D007CB78F /* Arcade */,
