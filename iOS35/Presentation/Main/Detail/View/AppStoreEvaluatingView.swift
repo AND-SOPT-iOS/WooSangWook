@@ -31,7 +31,21 @@ class AppStoreEvaluatingView: UIView {
         return star
     }
     
-    private let appStoreReviewCellView = AppStoreReviewCellView()
+    private let reviewCollectionView = UICollectionView(
+        frame: .zero,
+        collectionViewLayout: SnappingCollectionViewFlowLayout().then {
+            $0.scrollDirection = .horizontal
+            $0.minimumLineSpacing = 3
+            $0.minimumInteritemSpacing = 3
+            $0.itemSize = .init(width: UIScreen.main.bounds.width - 20,  height: UIScreen.main.bounds.height / 7)
+        }
+    ).then {
+        $0.showsHorizontalScrollIndicator = false
+        $0.isScrollEnabled = true
+        $0.contentInset = .init(top: 0, left: 0, bottom: 0, right: 0)
+        $0.register(ReviewCollectionViewCell.self, forCellWithReuseIdentifier: ReviewCollectionViewCell.identifier)
+        $0.backgroundColor = .black
+    }
     
     private let reviewButton = UIButton().then {
         $0.setTitle("리뷰 작성", for: .normal)
@@ -44,6 +58,7 @@ class AppStoreEvaluatingView: UIView {
         super.init(frame: frame)
         addSubviews()
         setupView()
+        setupDelegates()
     }
     
     required init?(coder: NSCoder) {
@@ -56,30 +71,32 @@ extension AppStoreEvaluatingView {
     private func addSubviews() {
         addSubview(titleLabel)
         addSubview(starGazer)
-        addSubview(appStoreReviewCellView)
+        addSubview(reviewCollectionView)
         addSubview(reviewButton)
     }
     
     private func setupView() {
         titleLabel.snp.makeConstraints {
-            $0.top.leading.equalToSuperview()
+            $0.top.equalToSuperview()
+            $0.leading.equalToSuperview().offset(20)
         }
         
         starGazer.snp.makeConstraints {
-            $0.trailing.equalToSuperview()
+            $0.trailing.equalToSuperview().offset(-20)
             $0.centerY.equalTo(titleLabel)
             $0.height.equalTo(30)
             $0.width.equalTo(180)
         }
         
-        appStoreReviewCellView.snp.makeConstraints {
+        reviewCollectionView.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(20)
             $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(UIScreen.main.bounds.height / 7)
         }
         
         reviewButton.snp.makeConstraints {
-            $0.top.equalTo(appStoreReviewCellView.snp.bottom).offset(20)
-            $0.leading.equalToSuperview()
+            $0.top.equalTo(reviewCollectionView.snp.bottom).offset(20)
+            $0.leading.equalToSuperview().offset(20)
             $0.bottom.equalToSuperview().offset(-40)
         }
         
@@ -107,6 +124,11 @@ extension AppStoreEvaluatingView {
             }
         }
     }
+    
+    private func setupDelegates() {
+        reviewCollectionView.delegate = self
+        reviewCollectionView.dataSource = self
+    }
 }
 
 extension AppStoreEvaluatingView {
@@ -122,5 +144,26 @@ extension AppStoreEvaluatingView {
     
     @objc private func writeReviewButtonTapped() {
         delegate?.didTapWriteReviewButton()
+    }
+}
+
+extension AppStoreEvaluatingView : UICollectionViewDelegate {
+    
+}
+
+extension AppStoreEvaluatingView : UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = reviewCollectionView.dequeueReusableCell(
+            withReuseIdentifier: ReviewCollectionViewCell.identifier,
+            for: indexPath
+        ) as? ReviewCollectionViewCell else { return UICollectionViewCell() }
+            return cell
     }
 }
