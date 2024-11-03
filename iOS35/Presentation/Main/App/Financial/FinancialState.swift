@@ -8,15 +8,15 @@
 import Foundation
 
 struct FinancialState{
-    var title: String
-    var recommendList: [RecommendApp]
-    var necessaryList: [RankingApp]
-    var paidList: [RankingApp]
-    var freeList: [RankingApp]
-    var firstSectionTitle: String
-    var secondSectionTitle: String
-    var thirdSectionTitle: String
-    var fourthSectionTitle: String
+    let title: String
+    let recommendList: [RecommendApp]
+    let necessaryList: [RankingApp]
+    let paidList: [RankingApp]
+    let freeList: [RankingApp]
+    let firstSectionTitle: String
+    let secondSectionTitle: String
+    let thirdSectionTitle: String
+    let fourthSectionTitle: String
     
     init(title: String = "", recommendList: [RecommendApp] = [], necessaryList: [RankingApp] = [], paidList: [RankingApp] = [], freeList: [RankingApp] = [], firstSectionTitle: String = "", secondSectionTitle: String = "", thirdSectionTitle: String = "", fourthSectionTitle: String = "") {
         self.title = title

@@ -8,8 +8,8 @@
 import Foundation
 
 struct RankingState {
-    var title: String
-    var rankingList: [RankingApp]
+    let title: String
+    let rankingList: [RankingApp]
     
     init(title: String = "", rankingList: [RankingApp] = []) {
         self.title = title

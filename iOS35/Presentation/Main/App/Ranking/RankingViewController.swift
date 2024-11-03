@@ -11,7 +11,7 @@ import SnapKit
 import Then
 
 class RankingViewController: UIViewController {
-    var rankingObservable = RankingObservable()
+    private let rankingObservable = RankingObservable()
     
     private var cancellables = Set<AnyCancellable>()
     

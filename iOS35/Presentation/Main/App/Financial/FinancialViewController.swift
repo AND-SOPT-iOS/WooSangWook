@@ -11,7 +11,7 @@ import SnapKit
 import Then
 
 class FinancialViewController: UIViewController {
-    var financialObservable = FinancialObservable()
+    private let financialObservable = FinancialObservable()
     private var cancellables = Set<AnyCancellable>()
     
     private let tableView = UITableView(frame: .zero, style: .grouped)
