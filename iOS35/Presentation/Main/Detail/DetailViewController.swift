@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-class MainViewController: UIViewController {
+class DetailViewController: UIViewController {
     private let scrollView = UIScrollView()
     
     private let contentView = UIView()
@@ -40,7 +40,21 @@ class MainViewController: UIViewController {
     
     private let informationView = AppStoreInfoView()
     
-    private let appStorePreviewView = AppStorePreviewView()
+    private let previewCollectionView = UICollectionView(
+        frame: .zero,
+        collectionViewLayout: UICollectionViewFlowLayout().then {
+            $0.scrollDirection = .horizontal
+            $0.minimumLineSpacing = 3
+            $0.minimumInteritemSpacing = 3
+            $0.itemSize = .init(width: UIScreen.main.bounds.width * 2 / 3.5,  height: UIScreen.main.bounds.height * 2 / 3.3)
+        }
+    ).then {
+        $0.showsHorizontalScrollIndicator = false
+        $0.isScrollEnabled = true
+        $0.contentInset = .init(top: 0, left: 10, bottom: 0, right: 10)
+        $0.register(PreviewCollectionViewCell.self, forCellWithReuseIdentifier: PreviewCollectionViewCell.identifier)
+        $0.backgroundColor = .black
+    }
     
     private let appStoreReviewView = AppStoreReviewView()
     
@@ -85,7 +99,7 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController {
+extension DetailViewController {
     
     private func setUI() {
         self.view.backgroundColor = .black
@@ -100,7 +114,7 @@ extension MainViewController {
         chipView.translatesAutoresizingMaskIntoConstraints = false
         
         scrollView.addSubview(contentView)
-        [titleView, chipView, informationView, appStorePreviewView, appStoreReviewView, appStoreEvaluatingView, horizontalDivider1, horizontalDivider2, horizontalDivider3, horizontalDivider4, horizontalDivider5].forEach { [weak self] view in
+        [titleView, chipView, informationView, previewCollectionView, appStoreReviewView, appStoreEvaluatingView, horizontalDivider1, horizontalDivider2, horizontalDivider3, horizontalDivider4, horizontalDivider5].forEach { [weak self] view in
             guard let self else { return }
             contentView.addSubview(view)
         }
@@ -151,13 +165,14 @@ extension MainViewController {
             $0.height.equalTo(0.5)
         }
         
-        appStorePreviewView.snp.makeConstraints {
-            $0.top.equalTo(horizontalDivider3.snp.bottom)
+        previewCollectionView.snp.makeConstraints {
+            $0.top.equalTo(horizontalDivider3.snp.bottom).offset(20)
+            $0.height.equalTo(UIScreen.main.bounds.height * 2 / 3.3)
             $0.leading.trailing.equalTo(contentView)
         }
         
         horizontalDivider4.snp.makeConstraints {
-            $0.top.equalTo(appStorePreviewView.snp.bottom).offset(20)
+            $0.top.equalTo(previewCollectionView.snp.bottom).offset(20)
             $0.leading.trailing.equalTo(contentView).inset(20)
             $0.height.equalTo(0.5)
         }
@@ -175,7 +190,7 @@ extension MainViewController {
         
         appStoreEvaluatingView.snp.makeConstraints {
             $0.top.equalTo(horizontalDivider5.snp.bottom).offset(20)
-            $0.leading.trailing.equalTo(contentView).inset(20)
+            $0.leading.trailing.equalTo(contentView)
             $0.bottom.equalTo(contentView)
         }
     }
@@ -184,25 +199,49 @@ extension MainViewController {
         informationView.delegate = self
         appStoreReviewView.delegate = self
         appStoreEvaluatingView.delegate = self
+        
+        previewCollectionView.delegate = self
+        previewCollectionView.dataSource = self
     }
 }
 
-extension MainViewController : AppStoreInfoViewDelegate {
+extension DetailViewController : AppStoreInfoViewDelegate {
     func didTapVersionHistory() {
         let nextViewController = VersionHistoryViewController()
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }
 
-extension MainViewController : AppStoreReviewViewDelegate {
+extension DetailViewController : AppStoreReviewViewDelegate {
     func didTapSeeAllButton() {
         let nextViewController = ReviewViewController()
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }
 
-extension MainViewController : AppStoreEvaluatingViewDelegate {
+extension DetailViewController : AppStoreEvaluatingViewDelegate {
     func didTapWriteReviewButton() {
         //TODO
+    }
+}
+
+extension DetailViewController : UICollectionViewDelegate {
+    
+}
+
+extension DetailViewController : UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = previewCollectionView.dequeueReusableCell(
+            withReuseIdentifier: PreviewCollectionViewCell.identifier,
+            for: indexPath
+        ) as? PreviewCollectionViewCell else { return UICollectionViewCell() }
+            return cell
     }
 }
