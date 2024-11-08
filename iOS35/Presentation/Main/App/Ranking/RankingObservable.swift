@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class RankingObservable: ObservableObject {
+class RankingObservable {
     @Published var state: RankingState = RankingState()
     let sideEffect = PassthroughSubject<RankingSideEffect, Never>()
     
