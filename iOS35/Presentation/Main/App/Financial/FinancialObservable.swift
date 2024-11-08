@@ -8,7 +8,7 @@
 import Combine
 import Foundation
 
-class FinancialObservable: ObservableObject {
+class FinancialObservable {
     @Published var state: FinancialState = FinancialState()
     
     let sideEffect = PassthroughSubject<FinancialSideEffect, Never>()
